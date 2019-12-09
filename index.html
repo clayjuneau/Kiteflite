@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>kiteflite</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    
+
+  <div id="root">
+    <h1 style="line-height: 0.8;"><span style="color:#e16665">kite</span><span style="color: #66a6ff">flite</span></h1>
+    <h3>Dark Mode:  <label class="switch">
+      <input type="checkbox" id="myCheck" onclick="checkbox()">
+      <span class="slider round"></span></h2>
+    
+    </label>
+    <div id = "leftpanel">
+      <br>
+      <span style="font-weight: bold;">Choose your kite</span> <br><br>
+      <div id ="radio">
+          <span>Diamond</span><span>Box</span><span>Parafoil</span>
+      </div>
+      <div id ="radio" style="font-size: 20px">
+        <span>0-3 mph</span><span>3-6 mph</span><span>> 6 mph</span>
+    </div>
+      <div id ="radio">
+          <input type="radio" name="kite" id="diamondkite" value="diamond">
+          <input type="radio" name="kite" id="boxkite" value="box">
+          <input type="radio" name="kite" id="parafoilkite" value="parafoil">
+      </div>
+            <br>
+            <span style="font-weight: bold;">Choose your current location</span> <br>
+            <select id="currlocation">
+               <option value="College Station">College Station</option>
+               <option value="New York">New York , New York</option>
+               <option value="Houston">Houston</option>
+               <option value="Miami">Miami</option>
+               <option value="Chicago">Chicago</option>
+               <option value="Los Angeles">Los Angeles</option>
+               <option value="Phoenix">Phoenix</option>
+               <option value="Denver">Denver</option>
+               <option value="Philadelphia">Philadelphia</option>
+               <option value="Kansas City">Kansas City, Missouri</option>
+               <option value="San Francisco">San Francisco</option>
+               <option value="Oklahoma City">Oklahoma City</option>
+               <option value="Boston">Boston</option>
+               <option value="Las Vegas">Las Vegas</option>
+               <option value="Columbus">Houston</option>
+               <option value="Nashville">Nashville</option>
+               <option value="Milwaukee">Milwaukee</option>
+               <option value="Atlanta">Atlanta</option>
+               <option value="Salt Lake City">Salt Lake City</option>
+               <option value="New Orleans">New Orleans</option>
+            </select>
+            <br><br>
+
+
+            <button class="button" type="button" onclick="myFunction()", >Fly!</button> 
+            <br>
+            <br>
+
+            <p id="demo"></p>
+          
+            
+    </div>
+
+    <br>
+        
+    <div id = "rightpanel" style="display: none;">
+      <br>
+      The best place to fly your kite is... <br>
+      <span id="location" style="font-size: 40px; font-weight:bold"></span>
+      <br> <br>
+      The temperature there is:
+      <br>
+      <span id="temp" style="font-weight:bold"></span>F with <span id="windspeed" style="font-weight:bold"></span> winds and <span id="condition" style="font-weight:bold"></span>!
+      <br>
+      <span style="font-style: italic">Perfect for flying your kite!</span>
+      <br> <br>
+      We looked for flights from <span id="locationoutput"></span> to your destination.
+      <div id="weather">
+        <div id="description"></div>
+        <div>
+        <h2><a class="button" href="error.html" id ="flight" target="_blank">Book flights!</a></div></h2>
+
+        <br>
+        Once you've arrived, go fly your kite at
+        <h2><a class="button" href="#" id ="park" target="_blank"></a> </h2>
+        <div> Then grab a bite to eat at
+        <h2><a class="button" href="#" id ="food" target="_blank"></a></div></h2>
+    </div>
+  </div>
+
+
+<script src="yelp-bundle.js"></script>
+<script src = "node_modules/clientside-require/dist/bundle.js"></script>
+<script src="weather.js"></script>
+<script src="skyScanner.js"></script>
+<script src="checkbox.js"></script>
+
+
+</body>
+
+</html>
